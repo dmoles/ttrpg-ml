@@ -14,7 +14,7 @@ game markup language
 School of Communication and Information <br/>
 Rutgers, The State University of New Jersey <br/>
 17:610:524:90 Metadata for the Information Professional <br/>
-Jessica Yi-Yun Cheng, Ph.D.  <br/>
+Jessica Yi-Yun Cheng, Ph.D., Instructor<br/>
 Fall 2023
 </p>
 </div>
