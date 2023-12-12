@@ -25,6 +25,8 @@ collector, but I find the theory of game design and the history of games
 and gaming interesting, and include among my friends many more serious
 hobbyists, including some successful independent game designers.
 
+## Potential users
+
 Potential users of the metadata schema include game designers, scholars of
 RPG studies (a growing field which now includes its own peer-reviewed
 journals, such as the _International Journal of Role-Playing_[^ijrp-nd]

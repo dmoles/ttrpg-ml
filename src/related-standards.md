@@ -26,7 +26,7 @@ I also considered including MODS[^mods-2022] to represent bibliographic
 references for specific game publications, such as the game book in which a
 particular system was introduced, or later games based on the same system,
 but in the end decided to keep bibliographic information minimal, pro tem.
- 
+
 ## Other related work
 
 I found no previous work on representing tabletop role-playing game systems
@@ -42,9 +42,7 @@ also e.g. Zagal et al.[^zagal-2005] on identifying game design elements and
 their relationships; but again, none of it is XML-based (most, in fact,
 seems to give very little consideration to interoperability or reuse at
 all).
-
-### Test
-
+ 
 That said, there is also a rich if informal literature among gameplayers
 and designers discussing game systems, rules, and mechanics, and essays
 like Edwards[^edwards-2004] on the relevance of mechanics to gameplay or
