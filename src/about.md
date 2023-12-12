@@ -1,7 +1,12 @@
 # About
 
-Submitted by David Moles, School of Communication and Information, Rutgers University
+|             |                                                         |
+|-------------|---------------------------------------------------------|
+| Author      | [David Moles](https://dmoles.info)                      |
+| Department  | School of Communication and Information                 |
+| Institution | Rutgers, The State University of New Jersey             |
+| Course      | 17:610:524:90 Metadata for the Information Professional |
+| Instructor  | Jessica Yi-Yun Cheng, Ph.D.                             |
+| Term        | Fall 2023                                               |
 
-17:610:524:90 Metadata for the Information Professional
-
-Jessica Yi-Yun Cheng, Ph.D.
+Copyright © 2023 David Moles. All rights reserved.
