@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rpg-system
+  xmlns="https://dmoles.info/ttrpgml-0.1"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    https://dmoles.info/ttrpgml-0.1 https://dmoles.info/ttrpgml-0.1.xsd
+    http://purl.org/dc/terms/ https://www.dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd
+  "
+>
+  <dct:title>d20 System</dct:title>
+  <alt-title type="abbreviation">d20</alt-title>
+  <identifier type="wikidata">Q284471</identifier>
+  <dct:source>https://web.archive.org/web/20040414045127/http://www.wizards.com/default.asp?x=d20/article/srd35</dct:source>
+  <scope campaign="true">
+    Originally intended for ongoing campaigns with a party of 3-6 players
+    and one game master (the "Dungeon Master", or "DM"), d20 games have
+    been adapted to solo play, one-shot tournament play, and other variations.
+  </scope>
+  <dct:description>
+    A simulationist, dice-based system with a core mechanic based on rolling a
+    20-sided die, applying various situational modifiers, and comparing the result
+    to a target value.
+  </dct:description>
+  <resp-stmt>
+    <dct:creator>Jonathan Tweet</dct:creator>
+    <dct:creator>Monte Cook</dct:creator>
+    <dct:creator>Skip Williams</dct:creator>
+    <dct:date>2000</dct:date>
+  </resp-stmt>
+  <rights>
+    <copyright>Copyright 2000 Wizards of the Coast, Inc.</copyright>
+    <rights-uri>http://opengamingfoundation.org/ogl.html</rights-uri>
+    <rights-uri>https://creativecommons.org/licenses/by/4.0/legalcode</rights-uri>
+    <note>
+      Originally licensed under the Open Gaming License 1.0a. Some later versions are
+      dual-licensed under the Open Gaming License and Creative Commons Attribution
+      4.0 International.
+    </note>
+  </rights>
+  <style>
+    <style-name>simulationist</style-name>
+  </style>
+  <games>
+    <game>
+      <dct:title>Dungeons &amp;amp; Dragons</dct:title>
+      <edition>3rd</edition>
+      <dct:description>
+        The third major edition of the long-running Dungeons &amp; Dragons franchise,
+        and the first published by Wizards of the Coast.
+      </dct:description>
+      <resp-stmt>
+        <dct:publisher>Wizards of the Coast, Inc.</dct:publisher>
+        <dct:date>2000</dct:date>
+      </resp-stmt>
+    </game>
+    <game>
+      <dct:title>Pathfinder</dct:title>
+      <dct:description>
+        A standalone game developed to be compatible with material published for
+        Dungeons &amp; Dragons 3.5.
+      </dct:description>
+      <resp-stmt>
+        <dct:publisher>Paizo Publishing</dct:publisher>
+        <dct:date>2009</dct:date>
+      </resp-stmt>
+    </game>
+  </games>
+</rpg-system>

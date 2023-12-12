@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1"
+  xmlns="https://dmoles.info/ttrpgml-0.1"
+  elementFormDefault="qualified"
+  targetNamespace="https://dmoles.info/ttrpgml-0.1"
+>
+  <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="https://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+  <xs:element name="rpg-systems">
+    <xs:annotation>
+      <xs:documentation>
+        Container type for a collection of RPG systems. The
+        collection may bear some intellectual relationship to one
+        another or be organized simply for convenience. Note that
+        empty collections are allowed.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="rpg-system"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rpg-system">
+    <xs:annotation>
+      <xs:documentation>
+        A tabletop role-playing game system (as distinguished from
+        particular games using the system).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="game-or-system">
+          <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="style"/>
+            </xs:choice>
+            <xs:element minOccurs="0" ref="games">
+              <xs:annotation>
+                <xs:documentation>
+                  <html:strong>Note:</html:strong>
+                  <html:code>game</html:code> properties not specified are assumed
+                  to be inherited from the parent <html:code>rpg-system</html:code>.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="alt-title">
+    <xs:annotation>
+      <xs:documentation>
+        An alternative title for a game or game system, such as a nickname,
+        abbreviation, subtitle, or translated title.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" type="alt-title-type" use="required"/>
+          <xs:attribute ref="xml:lang"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="edition">
+    <xs:annotation>
+      <xs:documentation>
+        An edition of a game or system. Different editions of a game
+        or system should be recorded as individual
+        <html:code>game</html:code>
+        or <html:code>rpg-system</html:code> elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="identifier">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="scope">
+    <xs:annotation>
+      <xs:documentation>
+        The size and scope of a game, e.g. the required/suggested number of players,
+        time per session, whether or not the game is intended for a multi-session
+        campaign, etc.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="players">
+            <xs:annotation>
+              <xs:documentation>
+                The required or suggested number of players of a game. Often
+                expressed as a range, e.g. <html:code>3-6</html:code>.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="session-time">
+            <xs:annotation>
+              <xs:documentation>
+                The required or suggested time for a game session. Often
+                expressed as a range, e.g. <html:code>2-3 hours</html:code>.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="campaign" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>
+                Whether or not the game is intended to be played as a multi-session
+                campaign.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="resp-stmt">
+    <xs:annotation>
+      <xs:documentation>
+        A statement of responsibility for a game or system.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="dct:creator"/>
+          <xs:element ref="dct:contributor"/>
+          <xs:element ref="dct:publisher"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="dct:date"/>
+        <xs:element minOccurs="0" ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rights">
+    <xs:annotation>
+      <xs:documentation>
+        Rights information for a game or system.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="copyright"/>
+          <xs:element name="rights-uri" type="xs:anyURI"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="style">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="style-note"/>
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="style-name"/>
+          <xs:element minOccurs="0" ref="style-note"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="style-name">
+    <xs:annotation>
+      <xs:documentation>
+        A style of play associated with a game or system, e.g.
+        gamist, narrativist, or simulationist.
+
+        <html:strong>Note:</html:strong>
+        For other play styles not
+        captured by this controlled vocabulary, use
+        <html:code>style-note</html:code>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="gamist"/>
+        <xs:enumeration value="narrativist"/>
+        <xs:enumeration value="simulationist"/>
+        <xs:enumeration value="freeform"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="style-note">
+    <xs:annotation>
+      <xs:documentation>
+        An explanatory note regarding play style.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="games">
+    <xs:annotation>
+      <xs:documentation>
+        A collection of games associated with a game system.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="game"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="game">
+    <xs:annotation>
+      <xs:documentation>
+        A tabletop role-playing game.
+        <html:strong>Note:</html:strong>
+        properties not specified are assumed
+        to be inherited from the parent <html:code>rpg-system</html:code>.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="game-or-system"/>
+      </xs:complexContent>
+    </xs:complexType>
+
+  </xs:element>
+
+  <xs:element name="copyright">
+    <xs:annotation>
+      <xs:documentation>
+        Copyright information for a game or system.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="note">
+    <xs:annotation>
+      <xs:documentation>
+        An explanatory note attached to other elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="game-or-system">
+    <xs:sequence>
+      <xs:element ref="dct:title"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="alt-title"/>
+      <xs:element minOccurs="0" ref="edition"/>
+      <xs:element minOccurs="0" ref="identifier"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="dct:source"/>
+      <xs:element minOccurs="0" ref="scope"/>
+      <xs:element ref="dct:description"/>
+      <xs:element minOccurs="0" ref="resp-stmt"/>
+      <xs:element minOccurs="0" ref="rights"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="alt-title-type">
+    <xs:annotation>
+      <xs:documentation>
+        Controlled values for the <html:code>alt-title</html:code> element's
+        <html:code>title-type</html:code>
+        attribute.
+
+        Inspired by
+        <html:a href="https://schema.datacite.org/meta/kernel-4.4/">DataCite 4</html:a>'s
+        <html:code>titleType</html:code>.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="abbreviation"/>
+      <xs:enumeration value="nickname"/>
+      <xs:enumeration value="subtitle"/>
+      <xs:enumeration value="translation"/>
+      <xs:enumeration value="other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
