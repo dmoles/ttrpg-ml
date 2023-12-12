@@ -1,0 +1,6 @@
+[book]
+authors = ["David Moles"]
+language = "en"
+multilingual = false
+src = "src"
+title = "TTRPG-ML"
