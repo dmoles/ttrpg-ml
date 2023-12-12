@@ -26,7 +26,7 @@ I also considered including MODS[^mods-2022] to represent bibliographic
 references for specific game publications, such as the game book in which a
 particular system was introduced, or later games based on the same system,
 but in the end decided to keep bibliographic information minimal, pro tem.
-
+ 
 ## Other related work
 
 I found no previous work on representing tabletop role-playing game systems
