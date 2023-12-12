@@ -3,4 +3,4 @@ authors = ["David Moles"]
 language = "en"
 multilingual = false
 src = "src"
-title = "TTRPG-ML"
+title = "TTRPG-ML: Sketch for a tabletop role-playing game markup language"
