@@ -51,4 +51,3 @@ linked data on role- playing games and gaming.
 [^zagal-2018]: Zagal, J.P. & Deterding, S. (Eds.). (2018). _Role-playing game studies: Transmedia foundations_ (pp. 323–336). Routledge. 
 
 [^ijrp-nd]: Department of Game Design, Uppsala University-Campus Gotland. (n.d.). About the Journal. _International Journal of Role-Playing._ [https://journals.uu.se/IJRP/about](https://journals.uu.se/IJRP/about)
-

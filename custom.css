@@ -1,0 +1,10 @@
+sup {
+    vertical-align: super;
+    display: inline-block;
+    margin-top: -0.5em;
+    border: 0.1em solid transparent;
+}
+
+sup > * {
+    font-size: smaller;
+}
