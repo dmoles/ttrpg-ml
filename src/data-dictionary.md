@@ -1,5 +1,8 @@
 # Data Dictionary
 
+_Note:_ The TTRPG•ML schema uses both [original elements](#ttrpgml-elements) and
+[embedded elements from Dublin Core Terms](#dublin-core-terms-elements), listed here separately.
+
 ## TTRPG•ML Elements
 
 | Element                       | Definition                                                                                                                                                            |
@@ -29,8 +32,8 @@
 | Definition  | Container type for a collection of RPG systems. |
 | Cardinality | Not repeatable.                                 |
 
-**Note:** The collection may bear some intellectual relationship to one another or be organized simply for convenience. Note that empty collections
-are allowed.
+**Note:** The collection may bear some intellectual relationship to one another or be organized simply for convenience.
+Note that empty collections are allowed.
 
 Data values:
  
@@ -220,5 +223,3 @@ Data values:
 | Label      | `dct:description`                                 |
 | URI        | `https://dmoles.info/ttrpgml-0.1/dct:description` |
 | Definition | A description of a game or system.                |
-
----
