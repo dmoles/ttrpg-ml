@@ -97,6 +97,17 @@ ul li {
     list-style-type: square;
 }
 
+ul.credits {
+    padding: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.credits li {
+    list-style-type: none;
+}
+
 table {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
