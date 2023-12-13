@@ -42,7 +42,7 @@ structured way. Some of these audiences might find the schema useful for
 (meta)data collection and analysis; others as an interchange format, or as
 the basis for a display system; a URI-addressable reference database of RPG
 systems might also be a linked data resource for other collections of
-linked data on role- playing games and gaming.
+linked data on role-playing games and gaming.
 
 ---
 
