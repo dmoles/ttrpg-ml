@@ -6,5 +6,4 @@ multilingual = false
 
 [output.html]
 additional-css = ["custom.css"]
-default-theme = "light"
 site-url = "https://dmoles.github.io/ttrpg-ml/"

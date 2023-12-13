@@ -12,9 +12,14 @@ I have chosen to include here only very general XML schemas that
 I either leveraged directly, or that inspired some elements of the design.
 
 The Dublin Core Terms[^dcmi-nd] schema is referenced directly for
-domain-agnostic metadata such as creator, date, rights, and so on. 
+domain-agnostic metadata such as creator, date, rights, and so on. However,
+certain elements that might appear similar to elements from Dublin Core Terms,
+such as [`<identifier>`](data-dictionary.md#identifier) and
+[`<rights>`](data-dictionary.md#rights), are defined separately in order
+to allow for more structure than the simple string values of Dublin Core.
 
-The use of an `<alt-title>` element to represent abbreviations, nicknames,
+The use of an [`<alt-title>`](data-dictionary.md#alt-title) element to
+represent abbreviations, nicknames,
 and so on, and an associated attribute `@alt-title-type` to represent the
 semantics of the alternate title, is inspired by the `<Title>` element and
 `@titleType` attribute from DataCite 4[^datacite-2021], but I decided
